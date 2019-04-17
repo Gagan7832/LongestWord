@@ -15,7 +15,13 @@ namespace ConsoleApp2
             Console.WriteLine(a.MyfunctionA("Ada Lovelace wrote the first algorithm designed for processing by an Analytical Engine."));
         }
 
-        
+        public MyFunctionA(string input)
+        {
+            string[] words = input.Split('');
+            int wordArrayLength = words.Length;
+            int[] wordsLength = new int[wordArrayLength];
+            int x = 0;
+        }
     
     }
 }
