@@ -3,25 +3,33 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-namespace ConsoleApp2
+namespace ConsoleApp7
 {
     class Program
     {
         static void Main(string[] args)
         {
             Program a = new Program();
-            Console.WriteLine("the longest word is:");
-            Console.WriteLine(a.MyfunctionA("Ada Lovelace wrote the first algorithm designed for processing by an Analytical Engine."));
+            Console.WriteLine("The Longest word is :");
+            Console.WriteLine(a.MyFunctionA("Ada Lovelace wrote the first alogirithm designed for processing by an Analytical Engine."));
         }
-
-        public MyFunctionA(string input)
+        public string MyFunctionA(string input)
         {
-            string[] words = input.Split('');
+            string[] words = input.Split(' ');
             int wordArrayLength = words.Length;
-            int[] wordsLength = new int[wordArrayLength];
+            int[] wordLength = new int[wordArrayLength];
             int x = 0;
+            string aa = " ";
+            foreach (var word in words)
+            {
+                if (word.Length > x)
+                {
+                    input = word;
+                    aa = input;
+                    x = word.Length;
+                }
+            }
+            
         }
-    
     }
 }
